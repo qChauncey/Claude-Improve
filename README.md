@@ -1,4 +1,4 @@
-# Claude-Improve
+# Claude-large-task-guardian
 
 A collection of Claude Code skills and configurations to improve AI-assisted development workflows.
 
@@ -33,7 +33,7 @@ A collection of Claude Code skills and configurations to improve AI-assisted dev
 Paste this one-liner into your terminal:
 
 ```bash
-mkdir -p ~/.claude/skills/large-task-guardian && curl -fsSL https://raw.githubusercontent.com/qchauncey/claude-improve/main/skills/large-task-guardian/SKILL.md -o ~/.claude/skills/large-task-guardian/SKILL.md && echo "✓ large-task-guardian installed"
+mkdir -p ~/.claude/skills/large-task-guardian && curl -fsSL https://raw.githubusercontent.com/qchauncey/Claude-large-task-guardian/main/skills/large-task-guardian/SKILL.md -o ~/.claude/skills/large-task-guardian/SKILL.md && echo "✓ large-task-guardian installed"
 ```
 
 That's it. Restart Claude Code and the skill is ready. On first use, Claude will ask whether to add the auto-trigger rule to your `~/.claude/CLAUDE.md`.
@@ -43,7 +43,7 @@ That's it. Restart Claude Code and the skill is ready. On first use, Claude will
 ## Files
 
 ```
-Claude-Improve/
+Claude-large-task-guardian/
 ├── CLAUDE.md                              # Global Claude instructions (auto-trigger rules)
 └── skills/
     └── large-task-guardian/
@@ -54,7 +54,7 @@ Claude-Improve/
 
 ---
 
-# Claude-Improve（中文说明）
+# Claude-large-task-guardian（中文说明）
 
 一套用于改善 AI 辅助开发工作流的 Claude Code 技能与配置集合。
 
@@ -89,7 +89,7 @@ Claude-Improve/
 将以下一行指令粘贴到终端执行：
 
 ```bash
-mkdir -p ~/.claude/skills/large-task-guardian && curl -fsSL https://raw.githubusercontent.com/qchauncey/claude-improve/main/skills/large-task-guardian/SKILL.md -o ~/.claude/skills/large-task-guardian/SKILL.md && echo "✓ large-task-guardian 安装完成"
+mkdir -p ~/.claude/skills/large-task-guardian && curl -fsSL https://raw.githubusercontent.com/qchauncey/Claude-large-task-guardian/main/skills/large-task-guardian/SKILL.md -o ~/.claude/skills/large-task-guardian/SKILL.md && echo "✓ large-task-guardian 安装完成"
 ```
 
 完成后重启 Claude Code 即可使用。首次使用时，Claude 会询问是否将自动触发规则追加到你的 `~/.claude/CLAUDE.md`。
@@ -99,7 +99,7 @@ mkdir -p ~/.claude/skills/large-task-guardian && curl -fsSL https://raw.githubus
 ## 文件结构
 
 ```
-Claude-Improve/
+Claude-large-task-guardian/
 ├── CLAUDE.md                              # 全局 Claude 指令（自动触发规则）
 └── skills/
     └── large-task-guardian/
