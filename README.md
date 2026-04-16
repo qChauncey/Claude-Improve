@@ -32,10 +32,9 @@ A collection of Claude Code skills and configurations to improve AI-assisted dev
 # Copy skill to your Claude skills directory
 mkdir -p ~/.claude/skills/large-task-guardian
 cp skills/large-task-guardian/SKILL.md ~/.claude/skills/large-task-guardian/
-
-# Copy global instructions (optional but recommended)
-cp CLAUDE.md ~/.claude/CLAUDE.md
 ```
+
+> **Auto-trigger setup:** On first use, the skill will detect whether the auto-trigger rule exists in your `~/.claude/CLAUDE.md` and ask if you want it added. It appends to your existing file — nothing is overwritten.
 
 ---
 
@@ -87,10 +86,9 @@ Claude-Improve/
 # 将技能复制到 Claude 技能目录
 mkdir -p ~/.claude/skills/large-task-guardian
 cp skills/large-task-guardian/SKILL.md ~/.claude/skills/large-task-guardian/
-
-# 复制全局指令文件（推荐）
-cp CLAUDE.md ~/.claude/CLAUDE.md
 ```
+
+> **自动触发配置：** 首次使用时，skill 会检测 `~/.claude/CLAUDE.md` 中是否已有自动触发规则，并询问是否添加。采用**追加**方式写入，不会覆盖你现有的任何配置。
 
 ---
 

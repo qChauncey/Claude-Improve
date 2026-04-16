@@ -21,6 +21,37 @@ Activate this skill when the task has ANY of these risk factors:
 
 Make a todo list for all tasks in this workflow, and work through them one by one.
 
+### 0. First-Run Setup (once per environment)
+
+Check if the auto-trigger rule already exists in the user's global CLAUDE.md:
+
+```bash
+grep -q "large-task-guardian" ~/.claude/CLAUDE.md 2>/dev/null && echo "EXISTS" || echo "MISSING"
+```
+
+If **MISSING**, ask the user:
+
+> "To make large-task-guardian trigger automatically in the future (without you having to invoke it manually), I can add a short rule to your `~/.claude/CLAUDE.md`. This will **append** to any existing content — nothing will be overwritten. Add it? (yes / no)"
+
+If the user says **yes**, append only the rule block — never overwrite the file:
+
+```bash
+cat >> ~/.claude/CLAUDE.md << 'EOF'
+
+## Large Task Guardian (Auto-trigger)
+
+Before starting ANY task, assess its complexity. If MEDIUM or HIGH risk, invoke the `large-task-guardian` skill immediately — do not wait for the user to ask.
+
+MEDIUM or HIGH risk means ANY of:
+- Touching >10 files
+- Bash commands likely to run >30 seconds
+- Spawning sub-agents for multi-step work
+- Full codebase refactors, installs, builds, or migrations
+EOF
+```
+
+If the user says **no**, skip silently and proceed with the current task — the skill will still work when invoked manually.
+
 ### 1. Risk Assessment
 
 Before starting any work, evaluate the task:
