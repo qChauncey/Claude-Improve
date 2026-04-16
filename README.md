@@ -24,17 +24,19 @@ A collection of Claude Code skills and configurations to improve AI-assisted dev
 - Spawning sub-agents for multi-step work
 - Full codebase refactors, installs, builds, or migrations
 
-**Auto-trigger:** Enabled via `CLAUDE.md`. Claude invokes this skill automatically when it assesses a task as MEDIUM or HIGH risk — no manual `/large-task-guardian` needed.
+**Auto-trigger:** On first use, the skill detects whether the auto-trigger rule exists in your `~/.claude/CLAUDE.md` and asks if you want it added. It appends to your existing file — nothing is overwritten.
 
-**Installation:**
+---
+
+### Installation
+
+Paste this one-liner into your terminal:
 
 ```bash
-# Copy skill to your Claude skills directory
-mkdir -p ~/.claude/skills/large-task-guardian
-cp skills/large-task-guardian/SKILL.md ~/.claude/skills/large-task-guardian/
+mkdir -p ~/.claude/skills/large-task-guardian && curl -fsSL https://raw.githubusercontent.com/qchauncey/claude-improve/main/skills/large-task-guardian/SKILL.md -o ~/.claude/skills/large-task-guardian/SKILL.md && echo "✓ large-task-guardian installed"
 ```
 
-> **Auto-trigger setup:** On first use, the skill will detect whether the auto-trigger rule exists in your `~/.claude/CLAUDE.md` and ask if you want it added. It appends to your existing file — nothing is overwritten.
+That's it. Restart Claude Code and the skill is ready. On first use, Claude will ask whether to add the auto-trigger rule to your `~/.claude/CLAUDE.md`.
 
 ---
 
@@ -78,17 +80,19 @@ Claude-Improve/
 - 为多步骤工作派生 sub-agent
 - 全量代码库重构、依赖安装、构建或数据迁移
 
-**自动触发：** 通过 `CLAUDE.md` 全局指令启用。Claude 在自行判断任务为 MEDIUM/HIGH 风险时会自动调用此技能，无需用户手动输入 `/large-task-guardian`。
+**自动触发：** 首次使用时，skill 会检测 `~/.claude/CLAUDE.md` 中是否已有自动触发规则，并询问是否添加。采用**追加**方式写入，不会覆盖你现有的任何配置。
 
-**安装方式：**
+---
+
+### 安装方式
+
+将以下一行指令粘贴到终端执行：
 
 ```bash
-# 将技能复制到 Claude 技能目录
-mkdir -p ~/.claude/skills/large-task-guardian
-cp skills/large-task-guardian/SKILL.md ~/.claude/skills/large-task-guardian/
+mkdir -p ~/.claude/skills/large-task-guardian && curl -fsSL https://raw.githubusercontent.com/qchauncey/claude-improve/main/skills/large-task-guardian/SKILL.md -o ~/.claude/skills/large-task-guardian/SKILL.md && echo "✓ large-task-guardian 安装完成"
 ```
 
-> **自动触发配置：** 首次使用时，skill 会检测 `~/.claude/CLAUDE.md` 中是否已有自动触发规则，并询问是否添加。采用**追加**方式写入，不会覆盖你现有的任何配置。
+完成后重启 Claude Code 即可使用。首次使用时，Claude 会询问是否将自动触发规则追加到你的 `~/.claude/CLAUDE.md`。
 
 ---
 
